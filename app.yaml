@@ -2,8 +2,12 @@ runtime: python27
 api_version: 1
 threadsafe: true
 handlers:
-- url: /
+- url: /docs
+  static_dir: build/docs
+- url: /images
+  static_dir: build/images
+- url: /static
+  static_dir: build/static
+- url: /.*
   static_files: build/index.html
   upload: build/index.html
-- url: /
-  static_dir: build
