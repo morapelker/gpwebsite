@@ -60,7 +60,7 @@ class App extends Component {
                                 <Route exact path='/home' component={IGHHome}/>
                                 <Route path='/products' render={() => <ProductsPage
                                     shrinked={this.state.shrinked}/>}/>
-                                <Route render={() => <Redirect to="/" push/>} />
+                                <Route render={() => <Redirect to="/" replace/>} />
                             </Switch>
                             <div style={{height: 100}}/>
                             <ContactPage/>
