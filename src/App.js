@@ -6,13 +6,12 @@ import IGHHome from './components/Home/HomePage';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {faQuoteRight, faPlus, faPaperPlane, faBars} from '@fortawesome/free-solid-svg-icons';
 import {fab} from '@fortawesome/free-brands-svg-icons';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import AboutPage from "./components/AboutPage/AboutPage";
 import AdvantagesPage from "./components/Advantages/AdvantagesPage";
 import FaqPage from "./components/FAQ/FaqPage";
 import ContactPage from "./components/Common/ContactPage";
 import ProductsPage from "./components/Products/ProductsPage";
-import NIY from "./components/NIY";
 import AppsPage from "./components/Apps/AppsPage";
 import HotelPage from "./components/Hotel/HotelPage";
 import OfficePage from "./components/Home/OfficePage";
@@ -61,7 +60,7 @@ class App extends Component {
                                 <Route exact path='/home' component={IGHHome}/>
                                 <Route path='/products' render={() => <ProductsPage
                                     shrinked={this.state.shrinked}/>}/>
-                                <Route component={HomePage} />
+                                <Route render={() => <Redirect to="/" push/>} />
                             </Switch>
                             <div style={{height: 100}}/>
                             <ContactPage/>
