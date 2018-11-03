@@ -6,17 +6,25 @@ const linkClicked = (location, history, selector) => () => {
     if (location === '/contact') {
         const contactSection = document.getElementById('contactSection');
         if (contactSection) {
-            window.scroll({
-                top: contactSection.offsetTop,
-                behavior: 'smooth'
-            })
+            try {
+                window.scroll({
+                    top: contactSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            } catch {
+                window.scroll(0, contactSection.offsetTop);
+            }
         }
     } else {
         if (history.location.pathname === location && location !== '/products') {
-            window.scroll({
-                top: 0,
-                behavior: 'smooth'
-            });
+            try {
+                window.scroll({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } catch {
+                window.scroll(0, 0);
+            }
         }
         else
             history.push(location);

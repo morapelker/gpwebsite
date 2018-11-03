@@ -24,9 +24,36 @@ const ContactPage = () => {
     const sendMail = () => {
         if (messageSent === 0) {
             setMessageSent(1);
-            setTimeout(() => {
+            fetch(
+                'https://api.mailjet.com/v3/send', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Basic NzlmMGMxYmM4ZTgwMTIyMTc2ODRiOGJjYTQ2MjQ4OTk6ZDIwODdlOWZhYjdjZmVkNDQ5ZWQwYWFiMjQzZWJiMzc=',
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                    },
+                    body: JSON.stringify({
+                        "FromEmail": "mor@greenpointsys.com",
+                        "FromName": "Green Point English Website",
+                        "Subject": "New Lead",
+                        "Text-part": "New lead from Green Point Systems English Website",
+                        "Html-part": "<h3>Name: " + name.value + "</h3><br />" +
+                            "<span>Email: " + email.value + "</span><br />" +
+                            "<span>Phone Number: " + phoneNumber.value + "</span><br />" +
+                            "<span>Message: " + message.value + "</span>",
+                        "Recipients": [
+                            {
+                                "Email": "morapelker@gmail.com"
+                            }
+                        ]
+                    })
+                }
+            ).then(() => {
                 setMessageSent(2);
-            }, 1000);
+            }).catch(err => {
+                console.log(err);
+                setMessageSent(2);
+            });
         }
     };
     const val = validate();

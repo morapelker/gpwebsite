@@ -35,11 +35,16 @@ class ProductsPage extends Component {
     scrollCorrectly = (hash, animated) => {
         const behavior = animated ? 'smooth' : undefined;
         if (!hash || hash.length === 0) {
-            window.scroll({
-                top: 0,
-                left: 0,
-                behavior
-            });
+            try {
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior
+                });
+            } catch {
+                window.scroll(0, 0);
+            }
+
         } else {
             if (hash.length > 0) {
                 let top = document.getElementById(hash.substring(1));
@@ -52,11 +57,16 @@ class ProductsPage extends Component {
                         else
                             return;
                     }
-                    window.scroll({
-                        top: top - 40,
-                        left: 0,
-                        behavior
-                    });
+                    try {
+                        window.scroll({
+                            top: top - 40,
+                            left: 0,
+                            behavior
+                        });
+                    } catch {
+                        window.scroll(0, top - 40);
+                    }
+
                 }
             }
         }
