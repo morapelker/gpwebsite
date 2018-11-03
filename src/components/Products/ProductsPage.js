@@ -9,7 +9,7 @@ import {
     downloadIGHC,
     downloadIR,
     downloadKeypad,
-    downloadSensor, glassString,
+    downloadSensor,
     ighcStrings,
     irItems,
     irPre, keypadItems,
@@ -199,16 +199,7 @@ class ProductsPage extends Component {
                                    }}>{downloadKeypad}</MatButton>
                     </a>
                 </SwitchComponent>
-                <SwitchComponent
-                    id={'glass'}
-                    even={true}
-                    dark={false}
-                    src={'glasswhite.png'}
-                    title={'Glass Panels'}
-                    marginTop={30}
-                    preText={glassString}
-                >
-                </SwitchComponent>
+
                 <div style={{
                     width: '100%',
                     display: 'flex',

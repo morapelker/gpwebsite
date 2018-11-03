@@ -20,7 +20,8 @@ const items = [
         text: ['SmartHome systems become a necessity for hotel rooms.',
             'igh Technology and abilities are evident in every aspect of this field',
             'and therefore it becomes a new standard.',
-        ]
+        ],
+        link: 'hotel'
     }, {
         source: 'images/slide3.jpg',
         title: 'Intelligent Green Office',
@@ -28,7 +29,8 @@ const items = [
             'over electric household and office expenses.',
             'igh SmartHome System may save up to 30% of the electric expenses and makes',
             'each working day much more efficient.',
-        ]
+        ],
+        link: 'office'
     }, {
         source: 'images/slide4.jpg',
         title: 'Intelligent Green Home',
@@ -36,7 +38,8 @@ const items = [
             'The sensors detect movement and measure the light and temperature levels,',
             'transmit the information to the switches that operate the electric appliances',
             'according to preset preferences and configurations.',
-        ]
+        ],
+        link: 'home'
     }
 ];
 
@@ -53,7 +56,7 @@ const MainSlideShow = (props) => {
     return (
         props.loaded ?
             <Zoom {...zoomOutProperties} style={{width: '100%'}}>
-                {items.map((item, index) => <SlideItem key={index}
+                {items.map((item, index) => <SlideItem history={props.history} key={index}
                                                        item={item}/>)}
             </Zoom>
             : <div style={{

@@ -64,7 +64,7 @@ class HomePage extends Component {
     render() {
         return (
             <div style={{width: '100%'}}>
-                <MainSlideShow loaded={this.state.loadedImages}/>
+                <MainSlideShow history={this.props.history} loaded={this.state.loadedImages}/>
                 <div style={{
                     marginTop: 10,
                     width: '100%'
@@ -78,9 +78,17 @@ class HomePage extends Component {
                         {info.map((info, index) => <HomeInfo history={this.props.history} info={info} key={index}/>)}
                     </div>
                     <div
-                        style={{width: '100%', height: 0, paddingTop: '50%', position: 'relative'}}>
+                        style={{
+                            width: '100%',
+                            height: 0,
+                            paddingTop: '50%',
+                            position: 'relative',
+                            paddingLeft: 5,
+                            paddingRight: 5,
+                            overflowX: 'hidden'
+                        }}>
                         <iframe title={'IGH Product Introduction'} style={{
-                            position: 'absolute', left: 0, top: 0, right: 0, bottom: 0,
+                            position: 'absolute', left: 0, top: 0, bottom: 0,
                             width: '100%', height: '100%'
                         }}
                                 allowFullScreen="allowfullscreen"

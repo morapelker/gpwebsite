@@ -1,9 +1,12 @@
 import React from 'react';
 import './router.css';
 
-const SlideItem = ({item}) => {
+const SlideItem = ({item, history}) => {
     return (
-        <div style={{width: '100%', height: '90vh'}}>
+        <div style={{width: '100%', height: '90vh', cursor: 'pointer'}}
+             onClick={() => {
+                 item.link && history.push(item.link);
+             }}>
             <img src={item.source} alt={''}
                  id={'img'}
                  style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
@@ -12,7 +15,7 @@ const SlideItem = ({item}) => {
                 left: 0,
                 top: 0,
                 right: 0,
-                background: 'rgba(0,0,0,0.35)',
+                background: 'rgba(0,0,0,0.5)',
                 bottom: 0,
             }}>
                 <div style={{

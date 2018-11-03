@@ -28,7 +28,7 @@ const ContactPage = () => {
                 'https://gpcloud-1329.appspot.com/webapi/util/contact', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'appliscation/json',
                     },
                     body: JSON.stringify({
                         name: name.value,
