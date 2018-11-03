@@ -25,6 +25,8 @@ const SlideItem = ({item, history}) => {
                     flexDirection: 'column',
                     position: 'relative',
                     width: '100%',
+                    paddingLeft: 10,
+                    paddingRight: 10,
                     maxWidth: 1200,
                     justifyContent: 'center'
                 }}>
