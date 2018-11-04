@@ -24,7 +24,7 @@ const info = [
     }
 ];
 
-function loadImage(url) {
+export function loadImage(url) {
     const r = (img, resolve) => () => {
         img.removeEventListener('load', r);
         img.removeEventListener('error', r);

@@ -40,7 +40,7 @@ const ContactPage = () => {
                 }
             ).then(() => {
                 setMessageSent(2);
-            }).catch(err => {
+            }).catch(() => {
                 setMessageSent(3);
             });
         }

@@ -3,7 +3,7 @@ import './App.css';
 import objectFitImages from 'object-fit-images';
 
 import Header from "./components/Header/Header";
-import HomePage from "./components/HomePage/HomePage";
+import HomePage, {loadImage} from "./components/HomePage/HomePage";
 import IGHHome from './components/Home/HomePage';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {faQuoteRight, faPlus, faPaperPlane, faBars} from '@fortawesome/free-solid-svg-icons';
@@ -17,6 +17,7 @@ import ProductsPage from "./components/Products/ProductsPage";
 import AppsPage from "./components/Apps/AppsPage";
 import HotelPage from "./components/Hotel/HotelPage";
 import OfficePage from "./components/Home/OfficePage";
+import {products} from "./components/Header/TextBlocks";
 
 library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars);
 
@@ -26,6 +27,7 @@ class App extends Component {
         this.state = {shrinked: false};
         window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
         objectFitImages();
+        products.forEach(item => loadImage('/images/' + item.icon));
     }
 
     handleScroll = ({target}) => {
