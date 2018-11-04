@@ -47,7 +47,7 @@ const AppPanel = () => {
                     flexDirection: 'row-reverse',
                     justifyContent: 'space-evenly'
                 }}>
-                    <img src={'/images/app_front2.png'} alt={''}
+                    <ImgWithLoader src={'/images/app_front2.png'} alt={''}
                          style={{width: '40%', marginTop: 40, objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
                     <div style={{
                         flex: 1,

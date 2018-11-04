@@ -1,8 +1,15 @@
+import 'babel-polyfill';
+import 'object-fit-images';
+
+import {polyfill} from 'es6-promise';
+import 'isomorphic-fetch';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+polyfill();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

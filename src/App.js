@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
+import objectFitImages from 'object-fit-images';
+
 import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage/HomePage";
 import IGHHome from './components/Home/HomePage';
@@ -22,7 +24,8 @@ class App extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {shrinked: false};
-        window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true
+        window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
+        objectFitImages();
     }
 
     handleScroll = ({target}) => {
@@ -60,7 +63,7 @@ class App extends Component {
                                 <Route exact path='/home' component={IGHHome}/>
                                 <Route path='/products' render={() => <ProductsPage
                                     shrinked={this.state.shrinked}/>}/>
-                                <Route render={() => <Redirect to="/" replace/>} />
+                                <Route render={() => <Redirect to="/" replace/>}/>
                             </Switch>
                             <div style={{height: 100}}/>
                             <ContactPage/>

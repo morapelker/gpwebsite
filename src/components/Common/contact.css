@@ -1,10 +1,12 @@
 .contact_root {
     width: 80%;
     flex: 1;
+    min-height: 300px;
     display: flex;
     flex-direction: row;
     margin: auto;
-    justify-content: space-evenly;
+    background-color: #cdcdcd;
+    justify-content: center;
 }
 
 .contact_form_parent {

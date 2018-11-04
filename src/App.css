@@ -19,6 +19,14 @@ li {
     text-align: left;
 }
 
+textarea {
+    font-family: Skia, sans-serif;
+}
+
+input {
+    font-family: Skia, sans-serif;
+}
+
 h4 {
     font-size: 2em;
     text-align: left;

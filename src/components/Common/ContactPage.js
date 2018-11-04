@@ -6,6 +6,7 @@ import RefreshIndicator from "./RefreshIndicator";
 import {LargeScreen} from "./ScreenSizes";
 import '../Common/contact.css';
 
+
 const ContactPage = () => {
 
     const name = useInput('Full Name*');
@@ -25,10 +26,10 @@ const ContactPage = () => {
         if (messageSent === 0) {
             setMessageSent(1);
             fetch(
-                'https://gpcloud-1329.appspot.com/webapi/util/contact', {
+                'https://gpcloud-1329.appspot.com/webapi/utils/contact', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'appliscation/json',
+                        'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
                         name: name.value,
@@ -40,8 +41,7 @@ const ContactPage = () => {
             ).then(() => {
                 setMessageSent(2);
             }).catch(err => {
-                console.log(err);
-                setMessageSent(2);
+                setMessageSent(3);
             });
         }
     };
@@ -66,7 +66,7 @@ const ContactPage = () => {
                     alignItems: 'flex-start',
                     marginTop: 40,
                     lineHeight: 2,
-                    textAlign: 'left'
+                    textAlign: 'left',
                 }}>
                     <span style={{fontWeight: 'bold'}}>Green Point Systems</span>
                     <span>Ha'Eshel 7 st. POB 3136, Caesarea Ind. Park South, Israel</span>
@@ -79,7 +79,7 @@ const ContactPage = () => {
                     <form style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        visibility: messageSent !== 2 ? 'unset' : 'hidden'
+                        visibility: messageSent < 2 ? 'unset' : 'hidden'
                     }}>
                         <input {...name} style={{width: '100%'}}/>
                         <div style={{display: 'flex', marginTop: 10, width: '100%'}}>
@@ -107,7 +107,7 @@ const ContactPage = () => {
 
                         </MatButton>
                     </form>
-                    {messageSent === 2 &&
+                    {messageSent >= 2 &&
                     <div style={{
                         position: 'absolute',
                         left: 0,
@@ -119,7 +119,7 @@ const ContactPage = () => {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}>
-                        <h4>Message Sent</h4>
+                        <h4>{messageSent === 2 ? 'Message Sent' : 'Message could not be sent'}</h4>
                     </div>
                     }
                 </div>
