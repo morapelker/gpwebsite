@@ -15,7 +15,7 @@ import {
     irPre, keypadItems,
     keypadPre,
     powerItems,
-    powerPre,
+    powerPre, glassItems,
     senseItems,
     sensePre,
     sensorItems1,
@@ -29,6 +29,8 @@ import MatButton from "../Common/MatButton";
 import {withRouter} from "react-router-dom";
 import '../Common/common.css';
 import './products.css';
+import ImgWithLoader from "../Common/ImgWithLoader";
+import {SmallScreen} from "../Common/ScreenSizes";
 
 class ProductsPage extends Component {
 
@@ -199,26 +201,53 @@ class ProductsPage extends Component {
                                    }}>{downloadKeypad}</MatButton>
                     </a>
                 </SwitchComponent>
-
+                <SwitchComponent
+                    id={'glass'}
+                    even={true}
+                    dark={false}
+                    src={'glasswhite.png'}
+                    title={'Glass Panels'}
+                    marginTop={30}
+                >
+                    <ul>
+                        {glassItems.map((item, index) => <li key={index}>{item}</li>)}
+                    </ul>
+                    <SmallScreen>
+                        <ImgWithLoader src={'/images/glasswhite.png'} alt={''} style={{
+                            maxWidth: '50%',
+                            objectFit: 'contain',
+                            marginTop: 10,
+                            maxHeight: 100,
+                            alignSelf: 'center'
+                        }}/>
+                    </SmallScreen>
+                </SwitchComponent>
                 <div style={{
                     width: '100%',
                     display: 'flex',
                     flexDirection: 'column',
                     paddingLeft: '20%',
                     paddingRight: '20%',
+                    marginTop: 30,
                     paddingBottom: 100,
                     alignItems: 'center'
                 }}>
                     <span className={'h4'}>Smart Operation Features</span>
                     <span style={{fontSize: '1.3em'}}>Basic Operation</span>
-                    {basicOper.map((item, index) =>
-                        <span key={index}
-                              style={{textAlign: 'left'}}><strong>{item.sub}</strong>{item.text}</span>)}
+                    <div style={{alignSelf: 'left'}}>
+                        {basicOper.map((item, index) =>
+                            <p key={index}
+                               style={{textAlign: 'left'}}><strong>{item.sub}</strong>{item.text}
+                            </p>)}
+                    </div>
                     <p/>
                     <span style={{fontSize: '1.3em'}}>Advanced Operation</span>
-                    {advancedOper.map((item, index) =>
-                        <span key={index}
-                              style={{textAlign: 'left'}}><strong>{item.sub}</strong>{item.text}</span>)}
+                    <div style={{alignSelf: 'left'}}>
+                        {advancedOper.map((item, index) =>
+                            <p key={index}
+                               style={{textAlign: 'left'}}><strong>{item.sub}</strong>{item.text}
+                            </p>)}
+                    </div>
                 </div>
             </div>
         );

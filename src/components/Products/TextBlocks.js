@@ -104,9 +104,17 @@ export const ighcStrings = [
     'Control 3rd Party Systems'
 ];
 
-export const glassString = 'Glass String here----------------------------------------------------\n-' +
-    '----------------------------------------------------\n----------------------------------------------------\n' +
-    '----------------------------------------------------';
+// export const glassItems = ['פנל זכוכית בגדלים שונים בעיצוב חדשני מינימלסטי בצבע לבן/שחור.',
+//     'אפשרות לבחירת אייקון מרכזי המותאם לסוג הצרכן.',
+//     'שלוש נקודות הפעלה לכל מפסק .',
+//     'חיווי מצבים על ידי 6 לדים לכל מפסק.'];
+
+export const glassItems = [
+    'Multi-size Multi-color Revolutionary Glass panels',
+    'Option to select a center icon for each switch',
+    '3 Points of operations per switch',
+    '6 LEDS per switch to determine the switch\'s current status'
+];
 
 export const keypadPre = 'The igh keypad allows rapid and easy management of system devices without ' +
     'any network connection. Each pattern can be integrated with different scenario.\n' +

@@ -62,6 +62,7 @@ class HomePage extends Component {
     }
 
     render() {
+
         return (
             <div style={{width: '100%'}}>
                 <MainSlideShow history={this.props.history} loaded={this.state.loadedImages}/>
@@ -85,11 +86,13 @@ class HomePage extends Component {
                             position: 'relative',
                             paddingLeft: 5,
                             paddingRight: 5,
-                            overflowX: 'hidden'
+                            overflowX: 'hidden',
+                            overflowY: 'hidden',
+                            background: 'black'
                         }}>
                         <iframe title={'IGH Product Introduction'} style={{
                             position: 'absolute', left: 0, top: 0, bottom: 0,
-                            width: '100%', height: '100%'
+                            width: '100%', height: '99%'
                         }}
                                 allowFullScreen="allowfullscreen"
                                 src="https://www.youtube.com/embed/P1U-8Mgi-yw">

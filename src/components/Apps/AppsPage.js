@@ -3,6 +3,7 @@ import PanelComponent from "./PanelComponent";
 import {appPanel1, otherPanels} from "./TextBlocks";
 import '../Common/common.css';
 import ImgWithLoader from "../Common/ImgWithLoader";
+import MatButton from "../Common/MatButton";
 
 class AppsPage extends Component {
     constructor(props, context) {
@@ -34,6 +35,11 @@ class AppsPage extends Component {
                            href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><ImgWithLoader
                             src={'/images/googleplay.png'} alt={''} style={{height: '100%', width: '100%'}}/></a>
                     </div>
+                    <a style={{width: 300, alignSelf: 'center'}} href={'/docs/app_en.pdf'}>
+                        <MatButton backgroundColor={'default'} style={{width: 300}}>
+                            App Manual
+                        </MatButton>
+                    </a>
                 </PanelComponent>
                 {otherPanels.map((item, index) => (index === 2 ?
                     <div key={index} style={{

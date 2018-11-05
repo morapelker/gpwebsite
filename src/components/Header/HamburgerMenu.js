@@ -44,7 +44,7 @@ const HamburgerMenu = ({history, closeDrawer}) => {
                         {products.map((item, index) => <li
                             onClick={linkClicked('/products#' + item.url, history, closeDrawer)}
                             key={index} className={'drawer_item sub'}>
-                            <ImgWithLoader color={'white'} style={{
+                            <ImgWithLoader color={'white'} noMargin style={{
                                 height: '100%',
                                 width: 40,
                                 objectFit: 'contain',
