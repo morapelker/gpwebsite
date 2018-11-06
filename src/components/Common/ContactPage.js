@@ -25,8 +25,16 @@ const ContactPage = () => {
     const sendMail = () => {
         if (messageSent === 0) {
             setMessageSent(1);
+
+            const proxyurl = "https://cors-anywhere.herokuapp.com/";
+            const url = 'https://gpcloud-1329.appspot.com/webapi/utils/contact'; // site that doesn’t send Access-Control-*
+            // fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+            //     .then(response => response.text())
+            //     .then(contents => console.log(contents))
+            //     .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+            //
             fetch(
-                'https://gpcloud-1329.appspot.com/webapi/utils/contact', {
+                proxyurl + url, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
