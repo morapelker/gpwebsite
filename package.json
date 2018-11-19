@@ -20,8 +20,7 @@
     "react-image": "^1.5.1",
     "react-responsive": "^6.0.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.5",
-    "react-slideshow-image": "^1.0.8"
+    "react-scripts": "2.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

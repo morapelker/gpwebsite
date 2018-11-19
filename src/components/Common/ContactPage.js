@@ -26,7 +26,7 @@ const ContactPage = () => {
         if (messageSent === 0) {
             setMessageSent(1);
             fetch(
-                'https://gpcloud-1329.appspot.com/webapi/utils/contact', {
+                'https://baloofeathers.herokuapp.com/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

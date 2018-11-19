@@ -94,30 +94,30 @@ class ProductsPage extends Component {
                     </div>
                 </div>
                 <LoadControl/>
-                <SwitchComponent id={'light'} even={true} dark={true} src={'lightwhite.png'}
+                <SwitchComponent id={'light'} even={true} dark={true} src={'lightblack.png'}
                                  title={'Light Switch'}
                                  preText={dimmerPre}
                                  listItems={dimmerItems}
                 />
-                <SwitchComponent id={'shutter'} even={false} dark={true} src={'shutterwhite.png'}
+                <SwitchComponent id={'shutter'} even={false} dark={true} src={'shutterblack.png'}
                                  title={'Shutter Switch'}
                                  preText={shutterPre}
                                  listItems={shutterItems}
                 />
-                <SwitchComponent id={'power'} even={true} dark={false} src={'powerwhite.png'}
+                <SwitchComponent id={'power'} even={true} dark={false} src={'powerblack.png'}
                                  title={'Power Switch'}
                                  preText={powerPre}
                                  listItems={powerItems}
                 />
                 <div className={'sense_parent'} id={'sense'}>
-                    <SwitchComponent even={false} dark={2} src={'sensewhite.png'}
+                    <SwitchComponent even={false} dark={2} src={'senseblack.png'}
                                      title={'Sense Switch'}
                                      preText={sensePre}
                                      listItems={senseItems}
                     />
                 </div>
                 <div className={'sensor_parent'} id={'sensor'}>
-                    <SwitchComponent even={true} dark={2} src={'sensorwhite.png'}
+                    <SwitchComponent even={true} dark={2} src={'sensorblack.png'}
                                      title={'Environmental Sensor'}
                                      height={400}
                                      marginTop={30}
@@ -145,7 +145,7 @@ class ProductsPage extends Component {
                     </SwitchComponent>
                     <SwitchComponent id={'irbridge'} even={false}
                                      dark={2}
-                                     src={'irwhite.png'}
+                                     src={'irblack.png'}
                                      title={'IR Bridge'}
                                      preText={irPre}
                                      height={300}
@@ -161,7 +161,7 @@ class ProductsPage extends Component {
                     </SwitchComponent>
                     <SwitchComponent id={'internetgateway'} even={true}
                                      dark={2}
-                                     src={'ighcwhite.png'}
+                                     src={'ighcblack.png'}
                                      title={'Internet Gateway'}
                                      preText={ighcStrings[0]}
                                      height={300}
@@ -184,7 +184,7 @@ class ProductsPage extends Component {
                     id={'keypad'}
                     even={false}
                     dark={false}
-                    src={'keypadwhite.png'}
+                    src={'keypadblack.png'}
                     title={'Intelligent Keypad'}
                     marginTop={30}
                     preText={keypadPre}
@@ -205,7 +205,7 @@ class ProductsPage extends Component {
                     id={'glass'}
                     even={true}
                     dark={false}
-                    src={'glasswhite.png'}
+                    src={'glassblack.png'}
                     title={'Glass Panels'}
                     marginTop={30}
                 >
@@ -213,7 +213,7 @@ class ProductsPage extends Component {
                         {glassItems.map((item, index) => <li key={index}>{item}</li>)}
                     </ul>
                     <SmallScreen>
-                        <ImgWithLoader src={'/images/glasswhite.png'} alt={''} style={{
+                        <ImgWithLoader src={'/images/glassblack.png'} alt={''} style={{
                             maxWidth: '50%',
                             objectFit: 'contain',
                             marginTop: 10,

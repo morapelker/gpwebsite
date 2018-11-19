@@ -64,7 +64,7 @@ export const products = [
     }, {
         text: 'Keypad',
         whiteImage: 'keypadwhite.png',
-        blackImage: 'keypadblack.png',
+        blackImage: 'keypadblack2.png',
         url: 'keypad',
         icon: 'keypadgeneric.png'
     }, {

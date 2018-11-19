@@ -13,6 +13,27 @@ const AboutSection = ({history}) => {
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
         }}>
+            <div
+                style={{
+                    width: '100%',
+                    height: 0,
+                    paddingTop: '50%',
+                    position: 'relative',
+                    paddingLeft: 5,
+                    paddingRight: 5,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+
+                }}>
+                <iframe title={'IGH Product Introduction'} style={{
+                    position: 'absolute', top: '10%', bottom: 0,
+                    width: '50%', height: '80%', left: '25%'
+                }}
+                        allowFullScreen="allowfullscreen"
+                        src="https://www.youtube.com/embed/P1U-8Mgi-yw">
+                </iframe>
+            </div>
+
             <div style={{
                 width: '100%',
                 paddingTop: 30,
