@@ -8,8 +8,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {initialize} from 'react-ga';
 
 polyfill();
+
+initialize('UA-130807358-1');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -17,6 +17,7 @@
     "object-fit-images": "^3.2.4",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
+    "react-ga": "^2.5.6",
     "react-image": "^1.5.1",
     "react-responsive": "^6.0.0",
     "react-router-dom": "^4.3.1",
