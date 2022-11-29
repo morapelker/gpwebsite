@@ -11,12 +11,15 @@ const info = [
         text: 'GreenPoint systems redefine the entire working environment and working experience, making your day much more joyful and efficient at the office.',
         image: 'office_icon.svg',
         link: 'office'
-    }, {
-        title: 'Intelligent Green Hotel',
-        text: 'Intelligent room occupancy detection system that makes decision based on a door magnet and a PIR detector, allowing separate WELCOME and GOODBYE scenario...',
-        image: 'hotel_icon.svg',
-        link: 'hotel'
-    }, {
+    }, 
+    // {
+    //     title: 'Intelligent Green Hotel',
+    //     text: 'Intelligent room occupancy detection system that makes decision based on a door magnet and a PIR detector, allowing separate WELCOME and GOODBYE scenario...',
+    //     image: 'hotel_icon.svg',
+    //     link: 'hotel'
+    // },
+    
+    {
         title: 'Intelligent Green Home',
         text: 'Close your shutter at night, open it slightly in the morning, close it while you are at work or even manage the room temperature and light automatically by...',
         image: 'home_icon.svg',

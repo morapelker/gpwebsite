@@ -63,7 +63,7 @@ class App extends Component {
                                     <Route exact path='/advantages' component={AdvantagesPage}/>
                                     <Route exact path='/faq' component={FaqPage}/>
                                     <Route exact path='/apps' component={AppsPage}/>
-                                    <Route exact path='/hotel' component={HotelPage}/>
+                                    {/* <Route exact path='/hotel' component={HotelPage}/> */}
                                     <Route exact path='/office' component={OfficePage}/>
                                     <Route exact path='/privacy' component={Policy}/>
                                     <Route exact path='/home' component={IGHHome}/>
